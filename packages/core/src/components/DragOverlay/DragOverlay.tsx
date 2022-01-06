@@ -1,12 +1,11 @@
+import {CSS, isKeyboardEvent, useLazyMemo} from '@stringke/dnd-kit-utilities';
 import React, {useContext, useEffect, useRef} from 'react';
-import {CSS, isKeyboardEvent, useLazyMemo} from '@dnd-kit/utilities';
-
-import {getRelativeTransformOrigin} from '../../utilities';
-import {applyModifiers, Modifiers} from '../../modifiers';
-import {ActiveDraggableContext} from '../DndContext';
 import {useDndContext} from '../../hooks';
+import {applyModifiers, Modifiers} from '../../modifiers';
 import type {ClientRect} from '../../types';
-import {useDropAnimation, defaultDropAnimation, DropAnimation} from './hooks';
+import {getRelativeTransformOrigin} from '../../utilities';
+import {ActiveDraggableContext} from '../DndContext';
+import {defaultDropAnimation, DropAnimation, useDropAnimation} from './hooks';
 
 type TransitionGetter = (
   activatorEvent: Event | null

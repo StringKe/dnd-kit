@@ -1,14 +1,13 @@
-import {useMemo, useCallback, useState, useRef} from 'react';
 import {
   isHTMLElement,
   useIsomorphicLayoutEffect,
   useNodeRef,
-} from '@dnd-kit/utilities';
-
-import {getMeasurableNode} from '../../utilities/nodes';
-import {getClientRect} from '../../utilities/rect';
+} from '@stringke/dnd-kit-utilities';
+import {useCallback, useMemo, useRef, useState} from 'react';
 import type {DndContextDescriptor} from '../../store';
 import type {ClientRect} from '../../types';
+import {getMeasurableNode} from '../../utilities/nodes';
+import {getClientRect} from '../../utilities/rect';
 
 interface Arguments {
   measure?(element: HTMLElement): ClientRect;

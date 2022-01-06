@@ -1,27 +1,25 @@
 import {
   add as getAdjustedCoordinates,
-  subtract as getCoordinatesDelta,
   getOwnerDocument,
   getWindow,
   isKeyboardEvent,
-} from '@dnd-kit/utilities';
-
+  subtract as getCoordinatesDelta,
+} from '@stringke/dnd-kit-utilities';
 import type {Coordinates} from '../../types';
 import {
   defaultCoordinates,
-  getTransformAgnosticClientRect,
-  getScrollPosition,
   getScrollElementRect,
+  getScrollPosition,
+  getTransformAgnosticClientRect,
 } from '../../utilities';
-import {Listeners} from '../utilities';
 import {EventName} from '../events';
-import type {SensorInstance, SensorProps, SensorOptions} from '../types';
-
-import {KeyboardCoordinateGetter, KeyboardCode, KeyboardCodes} from './types';
+import type {SensorInstance, SensorOptions, SensorProps} from '../types';
+import {Listeners} from '../utilities';
 import {
   defaultKeyboardCodes,
   defaultKeyboardCoordinateGetter,
 } from './defaults';
+import {KeyboardCode, KeyboardCodes, KeyboardCoordinateGetter} from './types';
 
 export interface KeyboardSensorOptions extends SensorOptions {
   keyboardCodes?: KeyboardCodes;

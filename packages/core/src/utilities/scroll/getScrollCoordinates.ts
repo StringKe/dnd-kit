@@ -1,5 +1,4 @@
-import {isWindow} from '@dnd-kit/utilities';
-
+import {isWindow} from '@stringke/dnd-kit-utilities';
 import type {Coordinates} from '../../types';
 
 export function getScrollXCoordinate(element: Element | typeof window): number {

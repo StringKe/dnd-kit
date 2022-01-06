@@ -1,17 +1,16 @@
-import {createContext, useContext, useMemo} from 'react';
 import {
   Transform,
+  useIsomorphicLayoutEffect,
   useNodeRef,
   useUniqueId,
-  useIsomorphicLayoutEffect,
-} from '@dnd-kit/utilities';
-
-import {Context, Data} from '../store';
+} from '@stringke/dnd-kit-utilities';
+import {createContext, useContext, useMemo} from 'react';
 import {ActiveDraggableContext} from '../components/DndContext';
+import {Context, Data} from '../store';
 import {
+  SyntheticListenerMap,
   useData,
   useSyntheticListeners,
-  SyntheticListenerMap,
 } from './utilities';
 
 export interface UseDraggableArguments {

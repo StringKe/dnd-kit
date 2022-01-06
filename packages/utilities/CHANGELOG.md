@@ -1,4 +1,4 @@
-# @dnd-kit/utilities
+# @stringke/dnd-kit-utilities
 
 ## 3.0.2
 
@@ -38,11 +38,11 @@
 
 ### Major Changes
 
-- [#373](https://github.com/clauderic/dnd-kit/pull/373) [`1f5ca27`](https://github.com/clauderic/dnd-kit/commit/1f5ca27b17879861c2c545160c2046a747544846) Thanks [@clauderic](https://github.com/clauderic)! - Added react to peerDependencies of @dnd-kit/utilities
+- [#373](https://github.com/clauderic/dnd-kit/pull/373) [`1f5ca27`](https://github.com/clauderic/dnd-kit/commit/1f5ca27b17879861c2c545160c2046a747544846) Thanks [@clauderic](https://github.com/clauderic)! - Added react to peerDependencies of @stringke/dnd-kit-utilities
 
 ### Minor Changes
 
-- [#334](https://github.com/clauderic/dnd-kit/pull/334) [`13be602`](https://github.com/clauderic/dnd-kit/commit/13be602229c6d5723b3ae98bca7b8f45f0773366) Thanks [@trentmwillis](https://github.com/trentmwillis)! - Move `Coordinates` interface along with `getEventCoordinates`, `isMouseEvent` and `isTouchEvent` helpers to @dnd-kit/utilities
+- [#334](https://github.com/clauderic/dnd-kit/pull/334) [`13be602`](https://github.com/clauderic/dnd-kit/commit/13be602229c6d5723b3ae98bca7b8f45f0773366) Thanks [@trentmwillis](https://github.com/trentmwillis)! - Move `Coordinates` interface along with `getEventCoordinates`, `isMouseEvent` and `isTouchEvent` helpers to @stringke/dnd-kit-utilities
 
 ### Patch Changes
 

@@ -1,10 +1,16 @@
+import {
+  ClientRect,
+  UniqueIdentifier,
+  useDndContext,
+} from '@stringke/dnd-kit-core';
+import {
+  useIsomorphicLayoutEffect,
+  useUniqueId,
+} from '@stringke/dnd-kit-utilities';
 import React, {MutableRefObject, useEffect, useMemo, useRef} from 'react';
-import {useDndContext, ClientRect, UniqueIdentifier} from '@dnd-kit/core';
-import {useIsomorphicLayoutEffect, useUniqueId} from '@dnd-kit/utilities';
-
+import {rectSortingStrategy} from '../strategies';
 import type {SortingStrategy} from '../types';
 import {getSortedRects} from '../utilities';
-import {rectSortingStrategy} from '../strategies';
 
 export interface Props {
   children: React.ReactNode;

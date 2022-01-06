@@ -1,12 +1,11 @@
+import {getOwnerDocument} from '@stringke/dnd-kit-utilities';
 import type {MouseEvent} from 'react';
-import {getOwnerDocument} from '@dnd-kit/utilities';
-
-import type {SensorProps} from '../types';
 import {
   AbstractPointerSensor,
-  PointerEventHandlers,
   AbstractPointerSensorOptions,
+  PointerEventHandlers,
 } from '../pointer';
+import type {SensorProps} from '../types';
 
 const events: PointerEventHandlers = {
   move: {name: 'mousemove'},

@@ -1,6 +1,5 @@
+import {canUseDOM} from '@stringke/dnd-kit-utilities';
 import {useEffect} from 'react';
-import {canUseDOM} from '@dnd-kit/utilities';
-
 import type {SensorDescriptor} from '../../sensors';
 
 export function useSensorSetup(sensors: SensorDescriptor<any>[]) {

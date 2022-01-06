@@ -1,13 +1,12 @@
-import {useState, useCallback, useMemo, useRef, useEffect} from 'react';
-import {add} from '@dnd-kit/utilities';
-
+import {add} from '@stringke/dnd-kit-utilities';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import type {Coordinates} from '../../types';
 import {
   defaultCoordinates,
   getScrollableElement,
   getScrollCoordinates,
   getScrollOffsets,
 } from '../../utilities';
-import type {Coordinates} from '../../types';
 
 type ScrollCoordinates = Map<HTMLElement | Window, Coordinates>;
 

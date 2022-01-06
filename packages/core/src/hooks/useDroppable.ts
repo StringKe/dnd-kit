@@ -1,11 +1,10 @@
-import {useContext, useEffect, useRef} from 'react';
 import {
   useIsomorphicLayoutEffect,
   useNodeRef,
   useUniqueId,
-} from '@dnd-kit/utilities';
-
-import {Context, Action, Data} from '../store';
+} from '@stringke/dnd-kit-utilities';
+import {useContext, useEffect, useRef} from 'react';
+import {Action, Context, Data} from '../store';
 import type {ClientRect} from '../types';
 import {useData} from './utilities';
 

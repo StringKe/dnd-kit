@@ -1,7 +1,5 @@
-import {CSS} from '@dnd-kit/utilities';
-
+import {CSS} from '@stringke/dnd-kit-utilities';
 import {arrayMove} from '../utilities';
-
 import type {
   AnimateLayoutChanges,
   NewIndexGetter,

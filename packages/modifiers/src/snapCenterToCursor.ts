@@ -1,9 +1,9 @@
-import type {Modifier} from '@dnd-kit/core';
+import type {Modifier} from '@stringke/dnd-kit-core';
 import {
   getEventCoordinates,
-  isTouchEvent,
   hasViewportRelativeCoordinates,
-} from '@dnd-kit/utilities';
+  isTouchEvent,
+} from '@stringke/dnd-kit-utilities';
 
 export const snapCenterToCursor: Modifier = ({
   activatorEvent,

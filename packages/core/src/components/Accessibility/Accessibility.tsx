@@ -1,12 +1,15 @@
+import {
+  HiddenText,
+  LiveRegion,
+  useAnnouncement,
+} from '@stringke/dnd-kit-accessibility';
+import {useUniqueId} from '@stringke/dnd-kit-utilities';
 import React, {useEffect, useMemo, useState} from 'react';
 import {createPortal} from 'react-dom';
-import {useUniqueId} from '@dnd-kit/utilities';
-import {HiddenText, LiveRegion, useAnnouncement} from '@dnd-kit/accessibility';
-
-import type {Announcements, ScreenReaderInstructions} from './types';
+import {DndMonitorArguments, useDndMonitor} from '../../hooks/monitor';
 import type {UniqueIdentifier} from '../../types';
 import {defaultAnnouncements} from './defaults';
-import {DndMonitorArguments, useDndMonitor} from '../../hooks/monitor';
+import type {Announcements, ScreenReaderInstructions} from './types';
 
 interface Props {
   announcements?: Announcements;

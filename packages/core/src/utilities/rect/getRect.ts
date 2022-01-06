@@ -1,5 +1,4 @@
-import {getWindow} from '@dnd-kit/utilities';
-
+import {getWindow} from '@stringke/dnd-kit-utilities';
 import type {ClientRect} from '../../types';
 import {inverseTransform} from '../transform';
 

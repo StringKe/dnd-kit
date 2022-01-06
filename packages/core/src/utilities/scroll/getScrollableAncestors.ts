@@ -3,8 +3,7 @@ import {
   isDocument,
   isHTMLElement,
   isSVGElement,
-} from '@dnd-kit/utilities';
-
+} from '@stringke/dnd-kit-utilities';
 import {isFixed} from './isFixed';
 import {isScrollable} from './isScrollable';
 

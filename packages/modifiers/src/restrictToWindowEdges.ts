@@ -1,5 +1,4 @@
-import type {Modifier} from '@dnd-kit/core';
-
+import type {Modifier} from '@stringke/dnd-kit-core';
 import {restrictToBoundingRect} from './utilities';
 
 export const restrictToWindowEdges: Modifier = ({

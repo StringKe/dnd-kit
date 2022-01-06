@@ -1,8 +1,7 @@
+import {useInterval} from '@stringke/dnd-kit-utilities';
 import {useCallback, useEffect, useMemo, useRef} from 'react';
-import {useInterval} from '@dnd-kit/utilities';
-
-import {getScrollDirectionAndSpeed, defaultCoordinates} from '../../utilities';
-import type {Coordinates, Direction, ClientRect} from '../../types';
+import type {ClientRect, Coordinates, Direction} from '../../types';
+import {defaultCoordinates, getScrollDirectionAndSpeed} from '../../utilities';
 
 export type ScrollAncestorSortingFn = (ancestors: Element[]) => Element[];
 

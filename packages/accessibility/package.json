@@ -1,5 +1,5 @@
 {
-  "name": "@dnd-kit/accessibility",
+  "name": "@stringke/dnd-kit-accessibility",
   "version": "3.0.0",
   "description": "A generic toolkit to help with accessibility",
   "author": "Claudéric Demers",

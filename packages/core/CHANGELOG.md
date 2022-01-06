@@ -1,4 +1,4 @@
-# @dnd-kit/core
+# @stringke/dnd-kit-core
 
 ## 4.0.3
 
@@ -29,7 +29,7 @@
   ```
 
 - Updated dependencies [[`1c6369e`](https://github.com/clauderic/dnd-kit/commit/1c6369e24ff338760adfb806c3017c72f3194726)]:
-  - @dnd-kit/utilities@3.0.1
+  - @stringke/dnd-kit-utilities@3.0.1
 
 ## 4.0.2
 
@@ -83,7 +83,7 @@
     DndContext,
     getBoundingClientRect,
     MeasuringConfiguration,
-  } from '@dnd-kit/core';
+  } from '@stringke/dnd-kit-core';
 
   const measuringConfig: MeasuringConfiguration = {
     draggable: {
@@ -148,7 +148,7 @@
 - [`1fe9b5c`](https://github.com/clauderic/dnd-kit/commit/1fe9b5c9d34237aae6ab22d54478c419d44a079a) Thanks [@clauderic](https://github.com/clauderic)! - The TouchSensor attempts to prevent the default browser behavior of scrolling the page by calling `event.preventDefault()` in the `touchmove` event listener. This wasn't working in iOS Safari due to a bug with dynamically attached `touchmove` event listeners. Adding a non-passive, non-capture `touchmove` event listener before dynamically attaching other `touchmove` event listeners solves the issue.
 
 - Updated dependencies [[`0e628bc`](https://github.com/clauderic/dnd-kit/commit/0e628bce53fb1a7223cdedd203cb07b6e62e5ec1), [`13be602`](https://github.com/clauderic/dnd-kit/commit/13be602229c6d5723b3ae98bca7b8f45f0773366), [`1f5ca27`](https://github.com/clauderic/dnd-kit/commit/1f5ca27b17879861c2c545160c2046a747544846)]:
-  - @dnd-kit/utilities@3.0.0
+  - @stringke/dnd-kit-utilities@3.0.0
 
 ## 3.1.1
 
@@ -190,7 +190,7 @@
 
 ### Patch Changes
 
-- [`f9ec28f`](https://github.com/clauderic/dnd-kit/commit/f9ec28fed77778669f93cfecee159dba54db38b4) [#217](https://github.com/clauderic/dnd-kit/pull/217) Thanks [@clauderic](https://github.com/clauderic)! - Fixes a regression introduced with `@dnd-kit/core@3.0.0` that was causeing sensors to stop working after a drag operation where activation constraints were not met.
+- [`f9ec28f`](https://github.com/clauderic/dnd-kit/commit/f9ec28fed77778669f93cfecee159dba54db38b4) [#217](https://github.com/clauderic/dnd-kit/pull/217) Thanks [@clauderic](https://github.com/clauderic)! - Fixes a regression introduced with `@stringke/dnd-kit-core@3.0.0` that was causeing sensors to stop working after a drag operation where activation constraints were not met.
 
 ## 3.0.0
 
@@ -212,7 +212,7 @@
   Example usage:
 
   ```tsx
-  import {DndContext, useDndMonitor} from '@dnd-kit/core';
+  import {DndContext, useDndMonitor} from '@stringke/dnd-kit-core';
 
   function App() {
     return (
@@ -240,7 +240,7 @@
   **Example usage:**
 
   ```tsx
-  import {DndContext, useDraggable, useDroppable} from '@dnd-kit/core';
+  import {DndContext, useDraggable, useDroppable} from '@stringke/dnd-kit-core';
 
   function Draggable() {
     const {attributes, listeners, setNodeRef, transform} = useDraggable({
@@ -280,8 +280,8 @@
 ### Patch Changes
 
 - Updated dependencies [[`a9d92cf`](https://github.com/clauderic/dnd-kit/commit/a9d92cf1fa35dd957e6c5915a13dfd2af134c103), [`b406cb9`](https://github.com/clauderic/dnd-kit/commit/b406cb9251beef8677d05c45ec42bab7581a86dc)]:
-  - @dnd-kit/accessibility@3.0.0
-  - @dnd-kit/utilities@2.0.0
+  - @stringke/dnd-kit-accessibility@3.0.0
+  - @stringke/dnd-kit-utilities@2.0.0
 
 ## 2.1.2
 
@@ -292,7 +292,7 @@
   - The current strategy used in the useAnnouncement hook is needlessly complex. It's not actually necessary to render multiple announcements at once within the LiveRegion component. It's sufficient to render a single announcement at a time. It's also un-necessary to clean up the announcements after they have been announced, especially now that the role="status" attribute has been added to LiveRegion, keeping the last announcement rendered means users can refer to the last status.
 
 - Updated dependencies [[`c24bdb3`](https://github.com/clauderic/dnd-kit/commit/c24bdb3723f1e3e4c474439f837a19c6d48059fb), [`2833337`](https://github.com/clauderic/dnd-kit/commit/2833337043719853902c3989dfcd5b55ae9ddc73)]:
-  - @dnd-kit/accessibility@2.0.0
+  - @stringke/dnd-kit-accessibility@2.0.0
 
 ## 2.1.1
 
@@ -372,7 +372,7 @@
   This behaviour can be customized using the `activator` option of the `autoScroll` prop:
 
   ```tsx
-  import {AutoScrollActivator, DndContext} from '@dnd-kit/core';
+  import {AutoScrollActivator, DndContext} from '@stringke/dnd-kit-core';
 
   <DndContext autoScroll={{activator: AutoScrollActivator.DraggableRect}} />;
   ```
@@ -382,7 +382,7 @@
   This generally leads to an improved user experience, but can be customized by passing a configuration object to the `autoScroll` prop that sets the `order` option to `TraversalOrder.ReversedTreeOrder` instead of the new default value of `TraversalOrder.TreeOrder`:
 
   ```tsx
-  import {DndContext, TraversalOrder} from '@dnd-kit/core';
+  import {DndContext, TraversalOrder} from '@stringke/dnd-kit-core';
 
   <DndContext autoScroll={{order: TraversalOrder.ReversedTreeOrder}} />;
   ```
@@ -390,7 +390,7 @@
   The autoscrolling `thresholds`, `acceleration` and `interval` can now also be customized using the `autoScroll` prop:
 
   ```tsx
-  import {DndContext} from '@dnd-kit/core';
+  import {DndContext} from '@stringke/dnd-kit-core';
 
   <DndContext
     autoScroll={{
@@ -411,7 +411,7 @@
   Finally, consumers can now conditionally opt out of scrolling certain scrollable ancestors using the `canScroll` option of the `autoScroll` prop:
 
   ```tsx
-  import {DndContext} from '@dnd-kit/core';
+  import {DndContext} from '@stringke/dnd-kit-core';
 
   <DndContext
     autoScroll={{
@@ -457,8 +457,8 @@
 - [`fd25eaf`](https://github.com/clauderic/dnd-kit/commit/fd25eaf7c114f73918bf83801890d970c9b56d18) [#68](https://github.com/clauderic/dnd-kit/pull/68) Thanks [@Pustelto](https://github.com/Pustelto)! - Wrap attributes returned from useDraggable hook in useMemo to allow pure component optimization
 
 - Updated dependencies [[`423610c`](https://github.com/clauderic/dnd-kit/commit/423610ca48c5e5ca95545fdb5c5cfcfbd3d233ba)]:
-  - @dnd-kit/accessibility@1.0.2
-  - @dnd-kit/utilities@1.0.2
+  - @stringke/dnd-kit-accessibility@1.0.2
+  - @stringke/dnd-kit-utilities@1.0.2
 
 ## 1.0.1
 
@@ -469,8 +469,8 @@
 - [`310bbd6`](https://github.com/clauderic/dnd-kit/commit/310bbd6370e85f8fb16cad149e6254600a5beb3a) [#37](https://github.com/clauderic/dnd-kit/pull/37) Thanks [@nickpresta](https://github.com/nickpresta)! - Fix typo in package.json repository URL
 
 - Updated dependencies [[`0b343c7`](https://github.com/clauderic/dnd-kit/commit/0b343c7e88a68351f8a39f643e9f26b8e046ef48), [`310bbd6`](https://github.com/clauderic/dnd-kit/commit/310bbd6370e85f8fb16cad149e6254600a5beb3a)]:
-  - @dnd-kit/utilities@1.0.1
-  - @dnd-kit/accessibility@1.0.1
+  - @stringke/dnd-kit-utilities@1.0.1
+  - @stringke/dnd-kit-accessibility@1.0.1
 
 ## 1.0.0
 
@@ -481,8 +481,8 @@
 ### Patch Changes
 
 - Updated dependencies [[`2912350`](https://github.com/clauderic/dnd-kit/commit/2912350c5008c2b0edda3bae30b5075a852dea63)]:
-  - @dnd-kit/accessibility@1.0.0
-  - @dnd-kit/utilities@1.0.0
+  - @stringke/dnd-kit-accessibility@1.0.0
+  - @stringke/dnd-kit-utilities@1.0.0
 
 ## 0.1.1
 
@@ -501,5 +501,5 @@
 ### Patch Changes
 
 - Updated dependencies [[`7bd4568`](https://github.com/clauderic/dnd-kit/commit/7bd4568e9f339552fd73a9a4c888460b11195a5e)]:
-  - @dnd-kit/accessibility@0.1.0
-  - @dnd-kit/utilities@0.1.0
+  - @stringke/dnd-kit-accessibility@0.1.0
+  - @stringke/dnd-kit-utilities@0.1.0

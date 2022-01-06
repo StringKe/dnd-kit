@@ -1,9 +1,8 @@
-import type {Modifier, ClientRect} from '@dnd-kit/core';
-import type {FirstArgument, Transform} from '@dnd-kit/utilities';
-
+import type {ClientRect, Modifier} from '@stringke/dnd-kit-core';
+import type {FirstArgument, Transform} from '@stringke/dnd-kit-utilities';
 import {restrictToHorizontalAxis, restrictToVerticalAxis} from '../src';
 
-describe('@dnd-kit/modifiers', () => {
+describe('@stringke/dnd-kit-modifiers', () => {
   const defaultRect: ClientRect = {
     left: 0,
     right: 0,

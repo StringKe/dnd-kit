@@ -1,12 +1,11 @@
+import {isHTMLElement, useLazyMemo} from '@stringke/dnd-kit-utilities';
 import {useMemo, useRef} from 'react';
-import {isHTMLElement, useLazyMemo} from '@dnd-kit/utilities';
-
-import {
-  Rect,
-  getWindowClientRect,
-  getTransformAgnosticClientRect,
-} from '../../utilities/rect';
 import type {ClientRect} from '../../types';
+import {
+  getTransformAgnosticClientRect,
+  getWindowClientRect,
+  Rect,
+} from '../../utilities/rect';
 
 type RectFn<T> = (element: T) => ClientRect;
 

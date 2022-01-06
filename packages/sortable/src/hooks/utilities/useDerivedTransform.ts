@@ -1,6 +1,9 @@
+import {ClientRect, getClientRect} from '@stringke/dnd-kit-core';
+import {
+  Transform,
+  useIsomorphicLayoutEffect,
+} from '@stringke/dnd-kit-utilities';
 import {useEffect, useRef, useState} from 'react';
-import {getClientRect, ClientRect} from '@dnd-kit/core';
-import {Transform, useIsomorphicLayoutEffect} from '@dnd-kit/utilities';
 
 interface Arguments {
   rect: React.MutableRefObject<ClientRect | null>;

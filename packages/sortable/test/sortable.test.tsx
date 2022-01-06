@@ -1,4 +1,4 @@
-describe('@dnd-kit/sortable', () => {
+describe('@stringke/dnd-kit-sortable', () => {
   it('works', () => {
     expect(true).toBe(true);
   });

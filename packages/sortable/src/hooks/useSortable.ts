@@ -1,7 +1,10 @@
+import {
+  useDraggable,
+  UseDraggableArguments,
+  useDroppable,
+} from '@stringke/dnd-kit-core';
+import {CSS, useCombinedRefs} from '@stringke/dnd-kit-utilities';
 import {useContext, useEffect, useMemo, useRef} from 'react';
-import {useDraggable, useDroppable, UseDraggableArguments} from '@dnd-kit/core';
-import {CSS, useCombinedRefs} from '@dnd-kit/utilities';
-
 import {Context} from '../components';
 import type {SortingStrategy} from '../types';
 import {isValidIndex} from '../utilities';

@@ -1,12 +1,11 @@
-import {add} from '@dnd-kit/utilities';
-
+import {add} from '@stringke/dnd-kit-utilities';
 import type {Coordinates} from '../../types';
+import {defaultCoordinates} from '../coordinates';
 import {
   getScrollCoordinates,
   getScrollXCoordinate,
   getScrollYCoordinate,
 } from './getScrollCoordinates';
-import {defaultCoordinates} from '../coordinates';
 
 export function getScrollOffsets(scrollableAncestors: Element[]): Coordinates {
   return scrollableAncestors.reduce<Coordinates>((acc, node) => {

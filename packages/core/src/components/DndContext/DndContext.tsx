@@ -1,6 +1,13 @@
+import {
+  add,
+  getEventCoordinates,
+  Transform,
+  useIsomorphicLayoutEffect,
+  useUniqueId,
+} from '@stringke/dnd-kit-utilities';
 import React, {
-  memo,
   createContext,
+  memo,
   useCallback,
   useEffect,
   useMemo,
@@ -9,41 +16,27 @@ import React, {
   useState,
 } from 'react';
 import {unstable_batchedUpdates} from 'react-dom';
-import {
-  add,
-  getEventCoordinates,
-  Transform,
-  useIsomorphicLayoutEffect,
-  useUniqueId,
-} from '@dnd-kit/utilities';
-
-import {
-  Action,
-  Context,
-  DndContextDescriptor,
-  getInitialState,
-  reducer,
-} from '../../store';
 import {DndMonitorContext, DndMonitorState} from '../../hooks/monitor';
-import {
-  useAutoScroller,
-  useCachedNode,
-  useCombineActivators,
-  useDragOverlayMeasuring,
-  useDroppableMeasuring,
-  useScrollableAncestors,
-  useSensorSetup,
-  useClientRect,
-  useClientRects,
-  useWindowRect,
-  useRect,
-  useScrollOffsets,
-} from '../../hooks/utilities';
 import type {
   AutoScrollOptions,
   DroppableMeasuring,
   SyntheticListener,
 } from '../../hooks/utilities';
+import {
+  useAutoScroller,
+  useCachedNode,
+  useClientRect,
+  useClientRects,
+  useCombineActivators,
+  useDragOverlayMeasuring,
+  useDroppableMeasuring,
+  useRect,
+  useScrollableAncestors,
+  useScrollOffsets,
+  useSensorSetup,
+  useWindowRect,
+} from '../../hooks/utilities';
+import {applyModifiers, Modifiers} from '../../modifiers';
 import {
   KeyboardSensor,
   PointerSensor,
@@ -54,6 +47,23 @@ import {
   SensorInstance,
 } from '../../sensors';
 import {
+  Action,
+  Context,
+  DndContextDescriptor,
+  getInitialState,
+  reducer,
+} from '../../store';
+import type {Active, DataRef, Over} from '../../store/types';
+import type {
+  ClientRect,
+  DragCancelEvent,
+  DragEndEvent,
+  DragMoveEvent,
+  DragOverEvent,
+  DragStartEvent,
+  UniqueIdentifier,
+} from '../../types';
+import {
   adjustScale,
   CollisionDetection,
   defaultCoordinates,
@@ -62,17 +72,6 @@ import {
   rectIntersection,
 } from '../../utilities';
 import {getTransformAgnosticClientRect} from '../../utilities/rect';
-import {applyModifiers, Modifiers} from '../../modifiers';
-import type {Active, DataRef, Over} from '../../store/types';
-import type {
-  ClientRect,
-  DragStartEvent,
-  DragCancelEvent,
-  DragEndEvent,
-  DragMoveEvent,
-  DragOverEvent,
-  UniqueIdentifier,
-} from '../../types';
 import {
   Accessibility,
   Announcements,

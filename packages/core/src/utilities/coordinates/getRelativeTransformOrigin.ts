@@ -1,4 +1,7 @@
-import {getEventCoordinates, isKeyboardEvent} from '@dnd-kit/utilities';
+import {
+  getEventCoordinates,
+  isKeyboardEvent,
+} from '@stringke/dnd-kit-utilities';
 import type {ClientRect} from '../../types';
 
 export function getRelativeTransformOrigin(

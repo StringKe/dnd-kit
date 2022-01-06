@@ -1,6 +1,5 @@
+import {useIsomorphicLayoutEffect} from '@stringke/dnd-kit-utilities';
 import {useRef} from 'react';
-import {useIsomorphicLayoutEffect} from '@dnd-kit/utilities';
-
 import type {Data} from '../../store';
 
 export function useData(data: Data | undefined) {

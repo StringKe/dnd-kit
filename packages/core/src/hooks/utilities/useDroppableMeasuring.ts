@@ -1,9 +1,8 @@
+import {useLazyMemo} from '@stringke/dnd-kit-utilities';
 import {useCallback, useEffect, useRef, useState} from 'react';
-import {useLazyMemo} from '@dnd-kit/utilities';
-
-import {Rect, getTransformAgnosticClientRect} from '../../utilities/rect';
 import type {DroppableContainer, RectMap} from '../../store/types';
 import type {ClientRect} from '../../types';
+import {getTransformAgnosticClientRect, Rect} from '../../utilities/rect';
 
 interface Arguments {
   dragging: boolean;

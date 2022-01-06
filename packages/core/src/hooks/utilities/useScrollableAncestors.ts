@@ -1,6 +1,5 @@
+import {useLazyMemo} from '@stringke/dnd-kit-utilities';
 import {useEffect, useRef} from 'react';
-import {useLazyMemo} from '@dnd-kit/utilities';
-
 import {getScrollableAncestors} from '../../utilities';
 
 const defaultValue: Element[] = [];

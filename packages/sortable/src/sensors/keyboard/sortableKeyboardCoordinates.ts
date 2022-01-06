@@ -1,10 +1,10 @@
 import {
   closestCorners,
+  DroppableContainer,
   getScrollableAncestors,
   KeyboardCode,
-  DroppableContainer,
   KeyboardCoordinateGetter,
-} from '@dnd-kit/core';
+} from '@stringke/dnd-kit-core';
 
 const directions: string[] = [
   KeyboardCode.Down,

@@ -1,5 +1,4 @@
-import {useLazyMemo} from '@dnd-kit/utilities';
-
+import {useLazyMemo} from '@stringke/dnd-kit-utilities';
 import type {DraggableNode, DraggableNodes} from '../../store';
 import type {UniqueIdentifier} from '../../types';
 

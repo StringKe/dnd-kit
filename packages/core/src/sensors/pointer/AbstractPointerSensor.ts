@@ -1,19 +1,18 @@
 import {
-  subtract as getCoordinatesDelta,
   getEventCoordinates,
   getOwnerDocument,
   getWindow,
-} from '@dnd-kit/utilities';
-
+  subtract as getCoordinatesDelta,
+} from '@stringke/dnd-kit-utilities';
+import type {Coordinates, DistanceMeasurement} from '../../types';
+import {EventName, preventDefault, stopPropagation} from '../events';
+import {KeyboardCode} from '../keyboard';
+import type {SensorInstance, SensorOptions, SensorProps} from '../types';
 import {
   getEventListenerTarget,
   hasExceededDistance,
   Listeners,
 } from '../utilities';
-import {EventName, preventDefault, stopPropagation} from '../events';
-import {KeyboardCode} from '../keyboard';
-import type {SensorInstance, SensorProps, SensorOptions} from '../types';
-import type {Coordinates, DistanceMeasurement} from '../../types';
 
 interface DistanceConstraint {
   distance: DistanceMeasurement;
